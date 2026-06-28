@@ -1,0 +1,19 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!*.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+.terraformrc
+terraform.rc
+
+# Env and secrets
+.env
+.env.*
+
+# OS
+.DS_Store
