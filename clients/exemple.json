@@ -1,0 +1,62 @@
+{
+  "_lecture": "Le dossier d'un client. Copiez ce fichier sous clients/<identifiant>.json, remplissez-le, puis lancez scripts/preparer_client.py. C'est le seul document à produire pour ouvrir une organisation : tout ce que les applications affichent en découle.",
+
+  "identifiant": "paroisse-saint-pierre",
+  "_identifiant": "Minuscules, chiffres et tirets. Sert à nommer les projets Cloudflare et le dossier de secrets. Ne change plus une fois le client ouvert.",
+
+  "organisation": {
+    "nom": "Paroisse Saint-Pierre",
+    "nom_court": "PSP",
+    "marque": "PAROISSE",
+    "_marque": "La ligne affichée en grand dans l'en-tête. Distincte du nom : l'une nomme le produit tel que le client le présente, l'autre nomme qui écrit.",
+    "ville": "Lyon",
+    "fuseau": "Europe/Paris",
+    "_fuseau": "Identifiant IANA. Détermine l'heure des activités, des relances et des récapitulatifs.",
+    "site": "https://saint-pierre.example",
+    "slogan": "Ensemble depuis 1892",
+    "logo_url": "",
+    "_logo_url": "Adresse publique du logo. Vide si le client n'en fournit pas : l'initiale du nom sert alors de monogramme.",
+    "signature": "La Paroisse Saint-Pierre",
+    "_signature": "Signe les courriels et les informations diffusées.",
+    "baseline": "communauté paroissiale"
+  },
+
+  "couleurs": {
+    "principale": "#7a1f3d",
+    "sombre": "#4d1326",
+    "_lecture": "Hexadécimal à trois ou six chiffres. Toute autre valeur est refusée et la couleur livrée est conservée : une couleur invalide rendrait l'interface illisible."
+  },
+
+  "vocabulaire": {
+    "_lecture": "Les mots de l'organisation. Chaque terme non renseigné garde le mot livré. Trois formes par terme : singulier, pluriel, article.",
+    "tribu": { "singulier": "secteur", "pluriel": "secteurs", "article": "le" },
+    "berger": { "singulier": "référent", "pluriel": "référents", "article": "le" }
+  },
+
+  "applications": {
+    "_lecture": "Les adresses où ce client sert ses applications. Une adresse vide signifie que l'application n'est pas ouverte pour lui : les autres cessent alors d'y renvoyer, au lieu de pointer vers le déploiement de quelqu'un d'autre.",
+    "api": "https://paroisse-saint-pierre-api.vercel.app",
+    "membre": "https://paroisse-saint-pierre-membre.pages.dev",
+    "back_office": "https://paroisse-saint-pierre-admin.pages.dev",
+    "public": "https://paroisse-saint-pierre-public.pages.dev",
+    "collaboration": "",
+    "pilotage": "",
+    "controleur": "",
+    "direction": ""
+  },
+
+  "mobile": {
+    "_lecture": "Renseigne marque.config.json de l'application Android. appId ne change plus jamais après publication : Google Play s'en sert comme clé d'identité.",
+    "app_id": "org.saintpierre.membres",
+    "app_name": "Saint-Pierre",
+    "version_name": "1.0",
+    "version_code": 1
+  },
+
+  "courriel": {
+    "_lecture": "L'expéditeur des messages. Une adresse sur un domaine que le client contrôle : un fournisseur d'envoi ne peut pas authentifier une adresse gmail.com ou yahoo.fr, et les messages partent alors en indésirables ou sont refusés.",
+    "expediteur": "notifications@saint-pierre.example",
+    "nom_expediteur": "Paroisse Saint-Pierre",
+    "fournisseur": "brevo"
+  }
+}
